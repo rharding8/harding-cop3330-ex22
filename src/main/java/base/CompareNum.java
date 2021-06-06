@@ -1,3 +1,8 @@
+/*
+ *  UCF COP3330 Summer 2021 Assignment 1 Solution
+ *  Copyright 2021 Ryan Harding
+ */
+
 package base;
 
 import java.util.Scanner;
@@ -16,17 +21,41 @@ public class CompareNum {
 
   public int getOne() {
     System.out.print("Enter the first number: ");
-    return input.nextInt();
+    String n = input.next();
+    try {
+      Integer.parseInt(n);
+    }
+    catch (NumberFormatException e) {
+      System.out.println("ERROR: Invalid Amount! Try Again.");
+      return getOne();
+    }
+    return Integer.parseInt(n);
   }
 
   public int getTwo() {
     System.out.print("Enter the second number: ");
-    return input.nextInt();
+    String n = input.next();
+    try {
+      Integer.parseInt(n);
+    }
+    catch (NumberFormatException e) {
+      System.out.println("ERROR: Invalid Amount! Try Again.");
+      return getTwo();
+    }
+    return Integer.parseInt(n);
   }
 
   public int getThree() {
     System.out.print("Enter the third number: ");
-    return input.nextInt();
+    String n = input.next();
+    try {
+      Integer.parseInt(n);
+    }
+    catch (NumberFormatException e) {
+      System.out.println("ERROR: Invalid Amount! Try Again.");
+      return getThree();
+    }
+    return Integer.parseInt(n);
   }
 
   public int getMax(int a, int b, int c) {
